@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Basic styling for header and nav */
+header {
+    background-color: #FFF6D6;
+    padding: 1.75rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.nav-links li {
+    padding: 0px 2rem;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    
+}
+
+h1, h2, h3{
+    font-family: "Jaldi", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    
+}
+
+h1{
+    font-size: xx-large;
+}
+
+h2, h3{
+    font-family: "Kosugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+nav h1{
+    color: #5ACC17;
+}
+
+.nav-links li a{
+    font-family: "Jaldi", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: #5ACC17;
+    font-size: larger;
+}
+
+.search-icon img, .cart img{
+    height: 1.25rem;
+    width: 1.25rem;
+    
+}
+
+.search-icon{
+    padding: 0px 2rem 0 0;
+}
+#uji-logo{
+    padding: 0 1rem 0 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+}
+
+/* Create line effect on hover */
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust distance from link */
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust thickness of the line */
+    background-color: #5ACC17; /* Change color as needed */
+    transition: width 0.3s ease; /* Adjust duration as needed */
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
+
+ul li ul.dropdown li{
+    display: block;
+    padding: 0.5rem;
+    
+}
+
+ul li ul.dropdown{
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #242325;
+    margin-top: 0.5rem;
+    display:none;
+    border-radius: 0.25rem;
+    color: #fff;
+}
+
+
+
+ul li:hover ul.dropdown{
+    display: block;
+    z-index: 999;
+}
+
+.carousel{
+    position: relative;
+}
+
+.carousel__item{
+    height: 40rem;
+    background: grey;
+    color: white;
+    display: none;
+    justify-content: center;
+
+}
+
+.carousel__item h2{
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.carousel__item h3{
+    font-size: 1rem;
+    font-weight: 100;
+}
+.carousel__item--selected{
+    display: block;
+}
+
+.carousel__nav{
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    
+}
+
+.carousel__button {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+
+}
+
+.carousel__button--selected {
+    background:  rgba(255, 255, 255, 0.7);
+    
+}
+
+#image-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/matcha-co-pC16vUGYCL4-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#image-2{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/jason-leung-f3uWanPu_rU-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+#image-3{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/bala-karthikeya-pavan-guda-rfObRW_1YXE-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    
+}
+.carousel__text{
+    margin-left: 5rem;
+    margin-top: 12rem;
+    display: inline-block;
+    
+    position: absolute;
+}
+
+.carousel__text a{
+    text-decoration: none;
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0rem 1rem;
+    border-radius: 0.25rem;
+    font-family: "jaldi", sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 2.5rem;
+}
+
+.carousel__text a:hover{
+    background-color: #5ACC17;
+}
+
+.carousel__text h2 {
+    padding: 1rem 0;
+}
+
