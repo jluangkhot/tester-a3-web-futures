@@ -36,6 +36,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: "jaldi", sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -117,18 +118,20 @@ nav h1{
     font-style: normal;
     text-decoration: none;
     color: #5ACC17;
-    font-size: larger;
+    font-size: 1.25rem;
 }
 
-.search-icon img, .cart img{
+.search-icon img, .cart-icon img{
     height: 1.25rem;
     width: 1.25rem;
     
 }
 
-.search-icon{
-    padding: 0px 2rem 0 0;
+.cart-icon{
+    padding-left: 30px;
 }
+
+
 #uji-logo{
     padding: 0 1rem 0 0;
 }
@@ -173,7 +176,7 @@ ul li ul.dropdown{
     padding: 0.5rem;
     position: absolute;
     background-color: #242325;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     display:none;
     border-radius: 0.25rem;
     color: #fff;
@@ -191,7 +194,7 @@ ul li:hover ul.dropdown{
 }
 
 .carousel__item{
-    height: 40rem;
+    height: 50rem;
     background: grey;
     color: white;
     display: none;
@@ -287,3 +290,226 @@ ul li:hover ul.dropdown{
     padding: 1rem 0;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+}
+
+.product {
+    width: 30rem; /* Adjust as needed */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #fff6d6;
+    width: 23rem;
+}
+
+.product:hover{
+    background-color: #242325;
+    color: #fff;
+}
+
+.product img {
+    width: 368px;
+    height: 368px;
+    object-fit: cover;
+}
+
+.product h3, .product p{
+    margin: 1rem;
+}
+.cart {
+    flex-grow: 1;
+}
+
+.cart h2 {
+    margin-bottom: 10px;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart li {
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -500px; /* Initially hidden */
+    width: 500px;
+    height: 100%;
+    background-color: #f4f4f4;
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.sidebar button {
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sidebar h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+
+.shop-header-container{
+    display: block;
+    text-align: center;
+    padding: 3rem 7rem;
+    
+}
+
+
+.shop-header-container h2{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.shop-header-container p{
+border-bottom: 2px solid #525252;
+padding-bottom: 1rem;
+}
+
+.cart-item-image{
+    width: 5rem;
+}
+
+
+.cart-items li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.atc-button{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+
+.atc-button:hover{
+    background-color: #5ACC17;
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+.categories-bar{
+    text-align: center;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+
+}
+
+.categories li a{
+    padding: 0 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #242325;
+    font-family: "Jaldi", sans-serif;
+    
+}
+
+.categories li{
+    border-left: 1px solid #242325;
+    padding: 0.5rem 0;
+}
+
+.categories li:last-child{
+    border-right: 1px solid #242325;
+}
+
+.categories li:hover{
+    border-top: 0.3rem solid #5ACC17;
+} 
+
+.categories a.active {
+    background-color: #5ACC17; /* Change to your desired color */
+    color: #fff;
+
+}
+
+
+img.cart-item-image{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.box{
+    background-color: #fff6d6;
+    display: flex;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.box:hover{
+    background-color: #fff
+}
+
+.box:hover input{
+    width: 300px;
+}
+
+.box input{
+    width:0;
+    outline: none;
+    border: none;
+    transition:0.8s;
+    background: transparent;
+}
+
+
+.cart-total {
+    display: flex;
+    font-size: 1.3em;
+    text-align: right;
+    width: 100%;
+    border-top: 1px solid #242325;
+    padding: 10px 0;
+}
+
+.sidebar h2{
+    font-size: 1.75rem;
+    font-weight: 500;
+    border-bottom: 1.25px solid #242325;
+    padding: 10px 0;
+}

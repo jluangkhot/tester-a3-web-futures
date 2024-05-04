@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Uji Creative</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Kosugi&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <header>
     <nav>
         <div class="logo">
-            <img src="assets/uji.png" id="uji-logo" alt="Logo">
+            <a href="index.html"><img src="assets/uji.png" id="uji-logo" alt="Logo"></a>
             <h1>Uji Creative</h1>
         </div>
         
@@ -29,18 +29,120 @@
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a href="#search" class="search-icon">
-            <img src="assets/search.svg" alt="Search Icon">
-        </a>
-        <div class="cart">
-            <img src="assets/cart.svg" alt="Shopping Cart">
+        <div class="box">
+            <input type="text" placeholder="Search">
+            <a href="#search" class="search-icon">
+                <img src="assets/search.svg" alt="Search Icon">
+            </a>
         </div>
+        <a href="#cart" class="cart-icon" onclick="toggleSidebar()">
+            <img src="assets/cart.svg" alt="Shopping Cart">
+        </a>
     </nav>
 </header>
 
 
 <body>
+    
+
+    <div class="shop-header-container">
+        <h2>Uji Matcha Series</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+    </div>
+
+    <div class="categories-bar">
+        <ul class="categories">
+            <li><a href="#" onclick="filterProducts('all')">All</a></li>
+            <li><a href="#" onclick="filterProducts('matcha')">Matcha Series</a></li>
+            <li><a href="#" onclick="filterProducts('hojicha')">Hojicha Series</a></li>
+            <li><a href="#" onclick="filterProducts('tea-accessories')">Tea Accessories</a></li>
+            <!-- Add more categories as needed -->
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="product-grid">
+            <div class="product" data-category="matcha"> 
+                <img src="/assets/mockupbee-ghsa1586bVU-unsplash.jpg" alt="Uji Matcha A Grade 1">
+                <h3>Uji Matcha A Grade 1</h3>
+                <p>$10.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Uji Matcha A Grade 1', 10)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="matcha">
+                <img src="/assets/mockupbee-ghsa1586bVU-unsplash.jpg" alt="Uji Matcha A Grade 2">
+                <h3>Uji Matcha A Grade 2</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Uji Matcha A Grade 2', 15)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="matcha">
+                <img src="/assets/mockupbee-ghsa1586bVU-unsplash.jpg" alt="Uji Matcha A Grade 3">
+                <h3>Uji Matcha A Grade 3</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Uji Matcha A Grade 3', 15)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="hojicha">
+                <img src="/assets/ffaf8eb8-a54a-4604-997b-01407c844bdb.jpg" alt="Uji Hojicha 1">
+                <h3>Uji Hojicha 1</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Uji Hojicha 1', 15)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="hojicha">
+                <img src="/assets/ffaf8eb8-a54a-4604-997b-01407c844bdb.jpg" alt="Uji Hojicha 2">
+                <h3>Uji Hojicha 2</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Uji Hojicha 2', 15)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="hojicha">
+                <img src="/assets/ffaf8eb8-a54a-4604-997b-01407c844bdb.jpg" alt="Uji Hojicha 3">
+                <h3>Uji Hojicha 3</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Uji Hojicha 3', 15)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="tea-accessories">
+                <img src="/assets/mildlee-8N6z4yXUkwY-unsplash.jpg" alt="Tea Gift Set 1">
+                <h3>Tea Gift Set 1</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Tea Gift Set 1', 15)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="tea-accessories">
+                <img src="/assets/mildlee-8N6z4yXUkwY-unsplash.jpg" alt="Tea Gift Set 2">
+                <h3>Tea Gift Set 2</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Tea Gift Set 2', 15)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="tea-accessories">
+                <img src="/assets/mildlee-8N6z4yXUkwY-unsplash.jpg" alt="Tea Gift Set 3">
+                <h3>Tea Gift Set 3</h3>
+                <p>$15.00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button type="button" class="atc-button" onclick="addToCart('Tea Gift Set 3', 15)">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+
+       
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <button onclick="toggleSidebar()">Close</button>
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items" class="cart-items">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <p id="cart-total" class="cart-total">Total: $0.00</p> <!-- Total price will be displayed here -->
+        
+    </div>
 
 
 
+    <script src="main.js"></script>
 </body>
+</html>
