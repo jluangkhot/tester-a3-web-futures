@@ -49,6 +49,16 @@ function filterProducts(category) {
     }
 }
 
+// Parse the category parameter from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get('category');
+
+// Filter products based on the category
+if (category) {
+    filterProducts(category);
+}
+
+
 let cart = {};
 
 // Function to add an item to the cart
@@ -82,15 +92,18 @@ function displayCart() {
         nameSpan.classList.add('cart-item-name');
         li.appendChild(nameSpan);
         
-        // Create span element for the product price
-        const priceSpan = document.createElement('span');
-        priceSpan.textContent = `$${item.price.toFixed(2)}`;
-        priceSpan.classList.add('cart-item-price');
-        li.appendChild(priceSpan);
+        // Calculate total price for the product
+        const totalPrice = item.price * item.quantity;
+        
+        // Create span element for the total price
+        const totalPriceSpan = document.createElement('span');
+        totalPriceSpan.textContent = `$${totalPrice.toFixed(2)}`; // Display total price
+        totalPriceSpan.classList.add('cart-item-total-price');
+        li.appendChild(totalPriceSpan);
         
         // Create span element for the product quantity
         const quantitySpan = document.createElement('span');
-        quantitySpan.textContent = `x${item.quantity}`;
+        quantitySpan.textContent = `${item.quantity}`;
         quantitySpan.classList.add('cart-item-quantity');
         li.appendChild(quantitySpan);
         
@@ -98,6 +111,7 @@ function displayCart() {
         cartItems.appendChild(li);
     }
 }
+
 
 // Function to get the product image dynamically based on the product name
 function getProductImage(productName) {

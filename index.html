@@ -9,33 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Kosugi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="assets/uji.png" id="uji-logo" alt="Logo"></a>
-                <h1>Uji Creative</h1>
-            </div>
-            
-            <ul class="nav-links">
-                <li><a href="shop.html">Shop</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Matcha Series</a></li>
-                        <li><a href="#">Hojicha Series</a></li>
-                        <li><a href="#">Tea Accessories</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="assets/uji.png" id="uji-logo" alt="Logo"></a>
+            <h1>Uji Creative</h1>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="shop.html?category=all"onclick="filterProducts('all')">Shop</a>
+                <ul class="dropdown">
+                    <li><a href="shop.html?category=matcha">Matcha Series</a></li>
+                    <li><a href="shop.html?category=hojicha">Hojicha Series</a></li>
+                    <li><a href="shop.html?category=tea-accessories">Tea Accessories</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="box">
+            <input type="text" placeholder="Search">
             <a href="#search" class="search-icon">
                 <img src="assets/search.svg" alt="Search Icon">
             </a>
-            <a href="#cart" class="cart-icon" onclick="toggleSidebar()">
-                <img src="assets/cart.svg" alt="Shopping Cart">
-            </a>
-        </nav>
-    </header>
+        </div>
+        <a href="#cart" class="cart-icon" onclick="toggleSidebar()">
+            <img src="assets/cart.svg" alt="Shopping Cart">
+        </a>
+    </nav>
+</header>
 
     <main>
         
@@ -44,7 +49,7 @@
                     <div class="carousel__text">
                         <h2>Our Matcha Series</h2>
                         <h3>Explore our exquisite range of matcha, curated to elevate your tea experience with unparalleled flavor and quality.</h3>
-                        <a href="shop.html">Shop</a>
+                        <a href="shop.html?category=matcha"onclick="filterProducts('matcha')">Shop</a>
                     </div>
                 </div>
                 <div class="carousel__item" id="image-2">

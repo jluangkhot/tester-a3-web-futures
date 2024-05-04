@@ -153,7 +153,7 @@ nav h1{
 .nav-links li a::before {
     content: '';
     position: absolute;
-    bottom: -2px; /* Adjust distance from link */
+    bottom: -1.5px; /* Adjust distance from link */
     left: 0;
     width: 0;
     height: 2px; /* Adjust thickness of the line */
@@ -176,7 +176,7 @@ ul li ul.dropdown{
     padding: 0.5rem;
     position: absolute;
     background-color: #242325;
-    margin-top: 0.75rem;
+    margin-top: 0.65rem;
     display:none;
     border-radius: 0.25rem;
     color: #fff;
@@ -326,6 +326,11 @@ ul li:hover ul.dropdown{
 .product h3, .product p{
     margin: 1rem;
 }
+
+.product h3{
+    font-size: 1.25rem;
+}
+
 .cart {
     flex-grow: 1;
 }
@@ -499,12 +504,13 @@ img.cart-item-image{
 
 
 .cart-total {
-    display: flex;
+    display: block;
     font-size: 1.3em;
     text-align: right;
-    width: 100%;
     border-top: 1px solid #242325;
     padding: 10px 0;
+    margin-left: 20px;
+    padding-right: 10px;
 }
 
 .sidebar h2{
